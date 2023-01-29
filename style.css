@@ -105,10 +105,11 @@ input, select {
     display: flex;
 }
 
-.seacrh input {
+.search input {
     width: 100%;
     margin-right: .3rem;
 }
+
 
 .filter {
     width: 35%;
