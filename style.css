@@ -8,64 +8,142 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgba(65, 184, 131,1)0%, rgba(0,212,255,1)100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: lightskyblue;
 }
 
-.container {
-    border: 2px solid #fff;
-    padding: 30px 40px;
-    width: 35%;
-    min-width: 500px;
-    border-radius: 10px;
-}
-
-.new-task-container {
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.322);
-    display: flex;
-}
-
-.new-task-container input {
-    flex: 3;
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem;
     font-size: 1rem;
-    border: 2px solid #d1d3d4;
-    padding: 12px;
-    font-weight: 500;
-    border-radius: 10px;
-
-}
-
-.new-task-button {
-    flex: 1;
-    border-radius: 5px;
-    font-weight: 500;
-    height: 100%;
-    font-size: 1rem;
-    border: none;
-    background-color: #41b883;
-    padding: 12px;
-    color: #fff;
     cursor: pointer;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
 }
 
-.new-task-container input:focus {
-    outline: none;
-    border-color: #41b883;
-
+button:hover {
+    background-color: #102f5e;
 }
 
+button:hover i {
+    color: #fff;
+}
 
-.tasks-container {
-    background-color: #fff;
-    padding: 30px 20px;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+button i {
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form, #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p, #edit-form p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+.toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.toolbar h4 {
+    margin-bottom: .5rem;
+}
+
+.search {
+    border-right:1px solid #DDD;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search form {
+    display: flex;
+}
+
+.seacrh input {
+    width: 100%;
+    margin-right: .3rem;
+}
+
+.filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter select {
+    flex: 1;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #DDD;
+    transition: .3s;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: .9rem;
+}
+
+.todo button {
+    margin-left: .4rem;
+}
+
+.done {
+    background-color: #395169;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
 }
